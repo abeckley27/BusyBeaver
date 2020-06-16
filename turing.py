@@ -19,8 +19,14 @@ class machine(object):
         #What state you are currently in
         self.st = 0
         
-        for k in range(n_):
-            self.lst.append(state(k))
+        for j in range(n_):
+            self.lst.append(state(j))
+    
+    def __str__(self):
+        s = ""
+        for j in range(self.n):
+            s += str(self.lst[j])
+        return s
     
     def run(self, t, p):
         x1 = t.t[p]
